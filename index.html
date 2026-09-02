@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<header>
+    <!-- nav-start -->
+    <nav class="max-w-full mx-auto flex justify-between items-center p-3 bg-white shadow-md">
+        <ul class="sidebar font-bold">
+            <li onclick=hideSidebar()>
+                <a href="#" class="anchor"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 96 960 960" width="35"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a>
+            </li>
+            <li><a href="#" class="anchor">Home</a></li>
+            <li><a href="test.html" target="_blank" class="anchor">Family</a></li>
+            <li><a href="#" class="anchor">Arav</a></li>
+            <li><a href="#" class="anchor">Asif</a></li>
+            <li><a href="#" class="anchor">Keya</a></li>
+        </ul>
+        <ul class="max-w-xs mx-auto">
+            <li><img src="images/family-logo.png" alt="" class="w-20"></li>
+            <!-- <li class="hideOnMobile"><a href="#" class="anchor">Home</a></li>
+            <li class="hideOnMobile"><a href="#" class="anchor">Family</a></li>
+            <li class="hideOnMobile"><a href="#" class="anchor">Arav</a></li>
+            <li class="hideOnMobile"><a href="#" class="anchor">Asif</a></li>
+            <li class="hideOnMobile"><a href="#" class="anchor">Keya</a></li> -->
+            <li class="menu-button" onclick=showSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 96 960 960" width="35"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav-end -->
+</header>
+
+<main>
+    <!-- slider-start -->
+    <div class="slider">
+        <div class="slides">
+            <img src="images/family/524.jpg" class="slide active" />
+            <img src="images/family/57.jpg" class="slide" />
+            <img src="images/family/76.jpg" class="slide" />
+        </div>
+    </div>
+    <!-- slider-end -->
+</main>
+
+<!-- hamburger-menu-js-start -->
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            }            
+</script>
+<!-- hamburger-menu-js-end -->
+
+<!-- slider-js-start -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    const slidesContainer = document.querySelector(".slides");
+
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentSlide = index;
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot) => dot.classList.remove("active"));
+            dots[currentSlide].classList.add("active");
+        }
+
+    setInterval(() => {
+    showSlide(currentSlide + 1);
+        }, 4000);
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => showSlide(idx));
+        });
+</script>
+<!-- slider-js-end -->  
+</body>
+</html>
