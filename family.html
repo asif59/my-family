@@ -43,7 +43,7 @@
 
 <main class="pt-20">
     <!-- slider-start -->
-    <div class="slider ">
+    <div class="slider">
         <div class="slides">
             <img src="images/family/524.jpg" class="slide active" />
             <img src="images/family/57.jpg" class="slide" />
@@ -53,34 +53,21 @@
     <!-- slider-end -->
 
     <!-- family-section-start -->
-    <section class="max-w-xs mx-auto flex flex-col items-center p-4 gap-2 mt-20" id="family">
+    <section class="max-w-xs mx-auto flex flex-col items-center p-4 gap-2 mt-20">
         <h1 class="font-bold text-3xl text-yellow-600"><span class="text-blue-900">Our</span> Family</h1>
         <p class="text-center text-gray-600">Together, we create the most beautiful memories. Our family, our love, our forever.</p>
-        <div class="flex flex-wrap justify-center gap-4 mt-4">
-            <img src="images/family/524.jpg" alt="Family Member 1" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/57.jpg" alt="Family Member 2" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/76.jpg" alt="Family Member 3" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/524.jpg" alt="Family Member 4" class="w-64 h-64 object-cover rounded-full">
+        <div class="grid grid-cols-2 items-center gap-2 mt-10">
+            <img src="images/family/524.jpg" alt="Family Member 1" class="w-36 h-36 rounded-tr-4xl rounded-bl-4xl">
+            <img src="images/family/57.jpg" alt="Family Member 2" class="w-36 h-36 rounded-tl-4xl rounded-br-4xl">
+            <img src="images/family/76.jpg" alt="Family Member 3" class="w-36 h-36 rounded-tl-4xl rounded-br-4xl">
+            <img src="images/family/524.jpg" alt="Family Member 4" class="w-36 h-36 rounded-tr-4xl rounded-bl-4xl">
+            <img src="images/family/524.jpg" alt="Family Member 1" class="w-36 h-36 rounded-tr-4xl rounded-bl-4xl">
+            <img src="images/family/57.jpg" alt="Family Member 2" class="w-36 h-36 rounded-tl-4xl rounded-br-4xl">
+            <img src="images/family/76.jpg" alt="Family Member 3" class="w-36 h-36 rounded-tl-4xl rounded-br-4xl">
+            <img src="images/family/524.jpg" alt="Family Member 4" class="w-36 h-36 rounded-tr-4xl rounded-bl-4xl">
         </div>
-        <p class="text-center text-gray-600">Our family is built on love, trust, and togetherness. We always stand by each other through every joy and every challenge. The little moments we share—laughing togethercelebrating special days, and making unforgettable memories—are what make our family truly special.</p>
-        <a href="family.html" class="bg-yellow-600 text-white font-bold py-2 px-4 mt-4 rounded hover:bg-yellow-700">Show More</a>
     </section>
     <!-- family-section-end -->
-
-     <!-- heart-section-start -->
-    <section class="max-w-xs mx-auto flex flex-col items-center p-4 gap-2 mt-20" id="heart">
-        <h1 class="font-bold text-3xl text-yellow-600">Our <span class="text-blue-900">Heart</span></h1>
-        <p class="text-center text-gray-600">Our beloved son, you are the sweetest blessing in our lives.You fill our hearts with endless love, joy, and beautiful memories.</p>
-        <div class="flex flex-wrap justify-center gap-4 mt-4">
-            <img src="images/family/524.jpg" alt="Family Member 1" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/57.jpg" alt="Family Member 2" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/76.jpg" alt="Family Member 3" class="w-64 h-64 object-cover rounded-full">
-            <img src="images/family/524.jpg" alt="Family Member 4" class="w-64 h-64 object-cover rounded-full">
-        </div>
-        <p class="text-center text-gray-600">Our beloved son, you are the greatest blessing in our lives and the little piece of our hearts that makes every day brighter. Your smile brings us happiness, your laughter fills our home with warmth, and watching you grow is one of the most beautiful journeys of our lives. No matter how much you grow or where life takes you, you will always be our little boy—the one we will love, protect, and cherish forever. You are not just our son; you are our happiness, our pride, and a precious part of our world. </p>
-        <a href="" class="bg-yellow-600 text-white font-bold py-2 px-4 mt-4 rounded hover:bg-yellow-700">Show More</a>
-    </section>
-    <!-- heart-section-end -->
 </main>
 
 <!-- footer-start -->
@@ -99,22 +86,7 @@
     function hideSidebar(){
         const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-            }
-            
-            
-            // Sidebar-এর সব menu item select করা
-const sidebarLinks = document.querySelectorAll('.sidebar a');
-
-// যেকোনো menu-তে click করলে sidebar বন্ধ হবে
-sidebarLinks.forEach(function(link) {
-
-    link.addEventListener('click', function() {
-
-        hideSidebar();
-
-    });
-
-});
+            }            
 </script>
 <!-- hamburger-menu-js-end -->
 
